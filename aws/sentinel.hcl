@@ -141,5 +141,5 @@ policy "validate-providers-from-desired-regions" {
   
   policy "prevent-auto-apply-in-production" {
   source = "./prevent-auto-apply-in-production.sentinel"
-  enforcement_level = "advisory"
+  enforcement_level = "soft-mandatory"
 }
