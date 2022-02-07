@@ -13,28 +13,8 @@ module "tfconfig-functions" {
 module "aws-functions" {
   source = "./aws-functions/aws-functions.sentinel"
 }
-
-policy "check-ec2-environment-tag" {
-  source = "./check-ec2-environment-tag.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "enforce-mandatory-tags" {
-  source = "./enforce-mandatory-tags.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "restrict-subnet-of-ec2-instances" {
-  source = "./restrict-subnet-of-ec2-instances.sentinel"
-  enforcement_level = "advisory"
-}
-
-policy "validate-providers-from-desired-regions" {
-  source = "./validate-providers-from-desired-regions.sentinel"
-  enforcement_level = "advisory"
-}
   
-  policy "prevent-auto-apply-in-production" {
+policy "prevent-auto-apply-in-production" {
   source = "./prevent-auto-apply-in-production.sentinel"
   enforcement_level = "soft-mandatory"
 }
